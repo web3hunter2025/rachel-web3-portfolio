@@ -42,75 +42,41 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section 
-        className="relative min-h-screen flex items-center pt-20"
-        style={{
-          backgroundImage: 'url(/images/hero-background.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        <div className="absolute inset-0 bg-background/80"></div>
-        <div className="container relative z-10">
+      {/* Hero Section - Simplified */}
+      <section className="relative py-12 pt-24 bg-background">
+        <div className="container">
           <div className="max-w-4xl">
-            <div className="mb-6 flex items-center gap-4">
-              <div className="w-16 h-1 bg-primary"></div>
+            <div className="mb-4 flex items-center gap-4">
+              <div className="w-12 h-1 bg-primary"></div>
               <span className="text-sm font-mono text-primary uppercase tracking-widest">Web3 Professional</span>
             </div>
             
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
-              Rachel
-              <br />
-              <span className="text-primary">Web3 项目作品集</span>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
+              Rachel <span className="text-primary">Web3 项目作品集</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl leading-relaxed">
               2年 Web3 行业经验,横跨<span className="text-primary font-semibold">社区建设</span>、
               <span className="text-accent font-semibold">链上投研</span>、
               <span className="text-destructive font-semibold">品牌运营</span>三大领域。
-              从执行者到管理者的完整成长路径。
             </p>
             
-            <div className="grid grid-cols-3 gap-6 mb-10 max-w-2xl">
-              <div className="border-2 border-primary p-4 bg-card">
-                <div className="text-3xl font-bold text-primary font-mono mb-1">2+</div>
-                <div className="text-sm text-muted-foreground">年行业经验</div>
+            <div className="grid grid-cols-3 gap-4 mb-6 max-w-xl">
+              <div className="border-2 border-primary p-3 bg-card">
+                <div className="text-2xl font-bold text-primary font-mono mb-1">2+</div>
+                <div className="text-xs text-muted-foreground">年行业经验</div>
               </div>
-              <div className="border-2 border-accent p-4 bg-card">
-                <div className="text-3xl font-bold text-accent font-mono mb-1">10+</div>
-                <div className="text-sm text-muted-foreground">项目经历</div>
+              <div className="border-2 border-accent p-3 bg-card">
+                <div className="text-2xl font-bold text-accent font-mono mb-1">10+</div>
+                <div className="text-xs text-muted-foreground">项目经历</div>
               </div>
-              <div className="border-2 border-destructive p-4 bg-card">
-                <div className="text-3xl font-bold text-destructive font-mono mb-1">2000+</div>
-                <div className="text-sm text-muted-foreground">社群管理</div>
+              <div className="border-2 border-destructive p-3 bg-card">
+                <div className="text-2xl font-bold text-destructive font-mono mb-1">2000+</div>
+                <div className="text-xs text-muted-foreground">社群管理</div>
               </div>
-            </div>
-            
-            <div className="flex gap-4">
-              <Button 
-                size="lg" 
-                className="bg-primary text-primary-foreground hover:bg-primary/90 border-2 border-primary font-mono uppercase tracking-wider"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                查看项目
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-border hover:border-primary font-mono uppercase tracking-wider"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                联系我
-              </Button>
             </div>
           </div>
         </div>
-        
-        {/* Geometric accent */}
-        <div className="absolute bottom-10 right-10 w-32 h-32 border-4 border-primary opacity-20"></div>
-        <div className="absolute top-1/3 right-1/4 w-16 h-16 border-4 border-accent opacity-10"></div>
       </section>
 
       {/* Projects Section */}
@@ -310,13 +276,10 @@ export default function Home() {
                 <span>X: catcat0x</span>
               </a>
               
-              <a 
-                href="mailto:web3rachel@outlook.com"
-                className="flex items-center gap-3 px-6 py-3 bg-card text-foreground border-2 border-border hover:border-primary transition-colors font-mono"
-              >
+              <div className="flex items-center gap-3 px-6 py-3 bg-card text-foreground border-2 border-border font-mono">
                 <Mail className="w-5 h-5" />
-                <span>Email</span>
-              </a>
+                <span>web3rachel@outlook.com</span>
+              </div>
             </div>
           </div>
         </div>
@@ -337,9 +300,7 @@ export default function Home() {
               <a href="https://twitter.com/catcat0x" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="mailto:web3rachel@outlook.com" className="text-muted-foreground hover:text-primary transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
+              <span className="text-muted-foreground text-sm font-mono">web3rachel@outlook.com</span>
             </div>
           </div>
         </div>
