@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>重定向中... - Rachel Web3 作品集</title>
+  <script>
+    // GitHub Pages 404 重定向脚本
+    // 将任何 404 页面重定向到首页,让 React Router 处理路由
+    (function() {
+      var path = window.location.pathname;
+      var base = '/rachel-web3-portfolio/';
+      
+      // 如果当前路径不是根路径,重定向到根路径并保留路径信息
+      if (path !== base && path !== base.replace(/\/$/, '')) {
+        // 将路径信息存储到 sessionStorage,以便 React Router 可以恢复
+        sessionStorage.setItem('redirectPath', path.replace(base, '/'));
+        window.location.replace(base);
+      } else {
+        // 如果已经在根路径,直接重定向到首页
+        window.location.replace(base);
+      }
+    })();
+  </script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .loading {
+      text-align: center;
+      color: #333;
+    }
+    .spinner {
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-left-color: #00d4ff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading">
+    <div class="spinner"></div>
+    <p>正在跳转到首页...</p>
+  </div>
+</body>
+</html>
