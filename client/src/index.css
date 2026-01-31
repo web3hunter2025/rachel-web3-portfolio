@@ -44,7 +44,7 @@
 
 :root {
   /* Purple theme inspired by web3hunter.online */
-  --background: oklch(0.15 0.05 280);  /* Deep purple background */
+  --background: oklch(0.25 0.05 280);  /* Light purple background */
   --foreground: oklch(0.95 0.01 280);  /* Light text */
   
   --card: oklch(0.18 0.05 280 / 0.5);  /* Semi-transparent card */
@@ -118,7 +118,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(135deg, #1a1a3e 0%, #2d1b4e 100%);
+    background: linear-gradient(135deg, #2d2550 0%, #3d2d5e 100%);
     min-height: 100vh;
   }
   button:not(:disabled),

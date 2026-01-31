@@ -43,7 +43,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20">
+      <section className="pt-24 pb-12">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -58,7 +58,7 @@ export default function Home() {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="dashed-card rounded-xl p-6 text-center">
               <div className="text-4xl font-bold text-primary mb-2">2+</div>
               <div className="text-sm text-muted-foreground">年行业经验</div>
@@ -66,10 +66,6 @@ export default function Home() {
             <div className="dashed-card rounded-xl p-6 text-center">
               <div className="text-4xl font-bold text-primary mb-2">10+</div>
               <div className="text-sm text-muted-foreground">项目经历</div>
-            </div>
-            <div className="dashed-card rounded-xl p-6 text-center">
-              <div className="text-4xl font-bold text-primary mb-2">2000+</div>
-              <div className="text-sm text-muted-foreground">社群管理</div>
             </div>
             <div className="dashed-card rounded-xl p-6 text-center">
               <div className="text-4xl font-bold text-primary mb-2">3</div>
@@ -80,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-12">
         <div className="container mx-auto px-6">
           {/* Community Projects */}
           <div className="mb-20">
@@ -163,7 +159,7 @@ export default function Home() {
                   onClick={() => setSelectedProject(project)}
                 >
                   <div className="mb-3">
-                    <span className="inline-block px-3 py-1 bg-destructive/20 text-destructive text-xs rounded-full mb-3">
+                    <span className="inline-block px-3 py-1 bg-primary/20 text-primary text-xs rounded-full mb-3">
                       {categoryLabels[project.category]}
                     </span>
                     <div className="text-xs text-muted-foreground mb-2">{project.period}</div>
@@ -172,7 +168,7 @@ export default function Home() {
                   <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
                     {project.shortDesc}
                   </p>
-                  <div className="text-xs text-destructive">查看详情 →</div>
+                  <div className="text-xs text-primary">查看详情 →</div>
                 </div>
               ))}
             </div>
@@ -231,12 +227,12 @@ export default function Home() {
             <p className="text-muted-foreground mb-10">
               欢迎交流 Web3 项目合作、社区运营、投研分析等话题
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <a
                 href="https://t.me/web3rachel"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors w-full sm:w-auto justify-center"
+                className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap"
               >
                 <Send className="w-5 h-5" />
                 <span>Telegram: web3rachel</span>
@@ -245,14 +241,14 @@ export default function Home() {
                 href="https://twitter.com/catcat0x"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-6 py-3 dashed-card rounded-lg hover:border-primary transition-colors w-full sm:w-auto justify-center"
+                className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors whitespace-nowrap"
               >
                 <Twitter className="w-5 h-5" />
                 <span>X: catcat0x</span>
               </a>
-              <div className="flex items-center gap-3 px-6 py-3 dashed-card rounded-lg w-full sm:w-auto justify-center">
+              <div className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg whitespace-nowrap">
                 <Mail className="w-5 h-5" />
-                <span className="text-sm">web3rachel@outlook.com</span>
+                <span>web3rachel@outlook.com</span>
               </div>
             </div>
           </div>
