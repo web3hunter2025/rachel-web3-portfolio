@@ -14,7 +14,7 @@ export default function ProjectModal({ project, open, onClose }: ProjectModalPro
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto bg-card/95 backdrop-blur-sm border border-primary/30 p-0">
+      <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto bg-[#fce4ec]/95 backdrop-blur-sm border border-primary/30 p-0">
         <button
           onClick={onClose}
           className="absolute right-4 top-4 z-50 p-2 rounded-lg bg-background/80 hover:bg-background transition-colors"

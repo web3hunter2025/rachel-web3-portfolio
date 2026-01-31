@@ -44,26 +44,25 @@
 
 :root {
   /* Purple theme inspired by web3hunter.online */
-  --background: oklch(0.25 0.05 280);  /* Light purple background */
-  --foreground: oklch(0.95 0.01 280);  /* Light text */
-  
-  --card: oklch(0.18 0.05 280 / 0.5);  /* Semi-transparent card */
-  --card-foreground: oklch(0.95 0.01 280);
+  --background: oklch(0.96 0.03 350);  /* Light purple background */
+  --foreground: oklch(0.25 0.02 280);  /* Dark text for light background */
+  --card: oklch(0.98 0.02 350);  /* Semi-transparent card */
+  --card-foreground: oklch(0.25 0.02 280);
   
   --popover: oklch(0.2 0.05 280);
   --popover-foreground: oklch(0.95 0.01 280);
   
   --primary: oklch(0.7 0.2 200);  /* Cyan/blue accent */
-  --primary-foreground: oklch(0.15 0.05 280);
+  --primary-foreground: oklch(1 0 0);
   
   --secondary: oklch(0.25 0.05 280);
   --secondary-foreground: oklch(0.95 0.01 280);
   
   --muted: oklch(0.25 0.05 280);
-  --muted-foreground: oklch(0.65 0.02 280);
+  --muted-foreground: oklch(0.45 0.02 280);
   
   --accent: oklch(0.7 0.2 200);  /* Cyan accent */
-  --accent-foreground: oklch(0.15 0.05 280);
+  --accent-foreground: oklch(1 0 0);
   
   --destructive: oklch(0.6 0.25 25);
   --destructive-foreground: oklch(0.95 0.01 280);
@@ -94,17 +93,17 @@
   --background: oklch(0.15 0.05 280);
   --foreground: oklch(0.95 0.01 280);
   --card: oklch(0.18 0.05 280 / 0.5);
-  --card-foreground: oklch(0.95 0.01 280);
+  --card-foreground: oklch(0.25 0.02 280);
   --popover: oklch(0.2 0.05 280);
   --popover-foreground: oklch(0.95 0.01 280);
   --primary: oklch(0.7 0.2 200);
-  --primary-foreground: oklch(0.15 0.05 280);
+  --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.25 0.05 280);
   --secondary-foreground: oklch(0.95 0.01 280);
   --muted: oklch(0.25 0.05 280);
-  --muted-foreground: oklch(0.65 0.02 280);
+  --muted-foreground: oklch(0.45 0.02 280);
   --accent: oklch(0.7 0.2 200);
-  --accent-foreground: oklch(0.15 0.05 280);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.6 0.25 25);
   --destructive-foreground: oklch(0.95 0.01 280);
   --border: oklch(0.35 0.05 280 / 0.3);
@@ -118,7 +117,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(135deg, #2d2550 0%, #3d2d5e 100%);
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
     min-height: 100vh;
   }
   button:not(:disabled),
