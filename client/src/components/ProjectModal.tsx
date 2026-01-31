@@ -1,4 +1,4 @@
-/* Brutalist Modernism - Project detail modal with hard borders and neon accents */
+/* Clean and professional project detail modal */
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Project, categoryLabels } from "@/data/projects";
 import { X } from "lucide-react";
@@ -14,63 +14,61 @@ export default function ProjectModal({ project, open, onClose }: ProjectModalPro
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-card border-2 border-primary p-0">
+      <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto bg-card/95 backdrop-blur-sm border border-primary/30 p-0">
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 z-50 p-2 bg-background border-2 border-border hover:border-primary transition-colors"
+          className="absolute right-4 top-4 z-50 p-2 rounded-lg bg-background/80 hover:bg-background transition-colors"
         >
-          <X className="w-5 h-5" />
+          <X className="w-5 h-5 text-muted-foreground hover:text-foreground" />
         </button>
         
         <div className="p-8">
-          <DialogHeader className="mb-6">
-            <div className="flex items-center gap-3 mb-2">
-              <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-mono uppercase tracking-wider">
+          <DialogHeader className="mb-8">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full">
                 {categoryLabels[project.category]}
               </span>
-              <span className="text-sm text-muted-foreground font-mono">{project.period}</span>
+              <span className="text-sm text-muted-foreground">{project.period}</span>
             </div>
-            <DialogTitle className="text-3xl font-bold text-foreground mb-2">
+            <DialogTitle className="text-2xl font-bold text-foreground mb-3">
               {project.title}
             </DialogTitle>
-            <p className="text-lg text-muted-foreground">{project.shortDesc}</p>
+            <p className="text-base text-muted-foreground leading-relaxed">{project.shortDesc}</p>
           </DialogHeader>
 
-          <div className="space-y-6">
-            <section className="border-l-4 border-primary pl-4">
-              <h3 className="text-xl font-bold mb-3 text-foreground">项目背景</h3>
+          <div className="space-y-8">
+            {/* 项目背景 */}
+            <section>
+              <h3 className="text-lg font-semibold mb-3 text-primary">项目背景</h3>
               <p className="text-foreground/90 leading-relaxed">{project.background}</p>
             </section>
 
-            <section className="border-l-4 border-accent pl-4">
-              <h3 className="text-xl font-bold mb-3 text-foreground">参与角色</h3>
+            {/* 参与角色 */}
+            <section>
+              <h3 className="text-lg font-semibold mb-3 text-primary">参与角色</h3>
               <p className="text-foreground/90 leading-relaxed">{project.role}</p>
             </section>
 
+            {/* 核心成果 */}
             <section>
-              <h3 className="text-xl font-bold mb-3 text-foreground flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary"></span>
-                核心成果
-              </h3>
+              <h3 className="text-lg font-semibold mb-4 text-primary">核心成果</h3>
               <ul className="space-y-3">
                 {project.achievements.map((achievement, idx) => (
-                  <li key={idx} className="pl-6 relative text-foreground/90 leading-relaxed">
-                    <span className="absolute left-0 top-2 w-3 h-3 border-2 border-primary"></span>
-                    {achievement}
+                  <li key={idx} className="flex gap-3 text-foreground/90 leading-relaxed">
+                    <span className="text-primary mt-1.5 flex-shrink-0">▪</span>
+                    <span>{achievement}</span>
                   </li>
                 ))}
               </ul>
             </section>
 
+            {/* 深刻认知 */}
             {project.insights.length > 0 && (
-              <section className="bg-secondary p-6 border-2 border-border">
-                <h3 className="text-xl font-bold mb-3 text-foreground flex items-center gap-2">
-                  <span className="w-2 h-2 bg-accent"></span>
-                  深刻认知
-                </h3>
+              <section className="bg-primary/5 rounded-lg p-6 border border-primary/20">
+                <h3 className="text-lg font-semibold mb-4 text-primary">深刻认知</h3>
                 <div className="space-y-3">
                   {project.insights.map((insight, idx) => (
-                    <p key={idx} className="text-foreground/90 leading-relaxed italic">
+                    <p key={idx} className="text-foreground/90 leading-relaxed">
                       {insight}
                     </p>
                   ))}
@@ -78,27 +76,31 @@ export default function ProjectModal({ project, open, onClose }: ProjectModalPro
               </section>
             )}
 
+            {/* 深度分析 */}
             {project.deepAnalysis && (
               <section>
-                <h3 className="text-xl font-bold mb-4 text-foreground">深度分析</h3>
-                <div className="space-y-4">
+                <h3 className="text-lg font-semibold mb-4 text-primary">深度分析</h3>
+                <div className="space-y-5">
                   {project.deepAnalysis.map((analysis, idx) => (
-                    <div key={idx} className="border-l-2 border-muted pl-4">
-                      <h4 className="font-bold text-lg mb-2 text-primary">{analysis.title}</h4>
-                      <p className="text-foreground/90 leading-relaxed">{analysis.content}</p>
+                    <div key={idx}>
+                      <h4 className="font-semibold text-base mb-2 text-foreground">{analysis.title}</h4>
+                      <p className="text-foreground/80 leading-relaxed pl-4 border-l-2 border-primary/30">
+                        {analysis.content}
+                      </p>
                     </div>
                   ))}
                 </div>
               </section>
             )}
 
+            {/* 能力积累 */}
             <section>
-              <h3 className="text-xl font-bold mb-3 text-foreground">能力积累</h3>
+              <h3 className="text-lg font-semibold mb-4 text-primary">能力积累</h3>
               <div className="flex flex-wrap gap-2">
                 {project.skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-muted text-foreground text-sm border border-border hover:border-primary transition-colors font-mono"
+                    className="px-3 py-1.5 bg-primary/10 text-foreground text-sm rounded-md border border-primary/20"
                   >
                     {skill}
                   </span>

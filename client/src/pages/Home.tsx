@@ -181,9 +181,9 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-12 text-center">核心能力总结</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <div className="dashed-card rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-primary mb-4">社区建设与用户运营</h3>
+                <h3 className="text-xl font-semibold mb-4 text-primary">社区建设与用户运营</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>• 多平台社群运营(Twitter/Telegram/Discord/微信)</li>
                   <li>• AMA/Twitter Space 策划与主持</li>
@@ -191,7 +191,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="dashed-card rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-accent mb-4">链上投研与交易分析</h3>
+                <h3 className="text-xl font-semibold mb-4 text-primary">链上投研与交易分析</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>• DeFi 挖矿/LP 收益测算</li>
                   <li>• 代币经济模型分析</li>
@@ -199,7 +199,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="dashed-card rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-destructive mb-4">品牌运营与活动策划</h3>
+                <h3 className="text-xl font-semibold mb-4 text-primary">品牌运营与活动策划</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>• 品牌从 0 到 1 搭建</li>
                   <li>• 线下活动全流程策划执行</li>
@@ -207,7 +207,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="dashed-card rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-4">团队管理与商务拓展</h3>
+                <h3 className="text-xl font-semibold mb-4 text-primary">团队管理与商务拓展</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>• 团队组建与目标制定</li>
                   <li>• 跨部门协调与资源整合</li>
