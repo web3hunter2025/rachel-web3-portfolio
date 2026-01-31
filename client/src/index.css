@@ -90,9 +90,9 @@
 }
 
 .dark {
-  --background: oklch(0.15 0.05 280);
-  --foreground: oklch(0.95 0.01 280);
-  --card: oklch(0.18 0.05 280 / 0.5);
+  --background: oklch(0.96 0.03 350);  /* Same as light pink background */
+  --foreground: oklch(0.25 0.02 280);  /* Dark text */
+  --card: oklch(0.98 0.02 350);  /* Light pink card */
   --card-foreground: oklch(0.25 0.02 280);
   --popover: oklch(0.2 0.05 280);
   --popover-foreground: oklch(0.25 0.02 280);
