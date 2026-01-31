@@ -16,6 +16,13 @@ import ProjectModal from "@/components/ProjectModal";
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const communityProjects = projects.filter(p => p.category === "community");
   const researchProjects = projects.filter(p => p.category === "research");
   const brandingProjects = projects.filter(p => p.category === "branding");
@@ -28,15 +35,15 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="text-xl font-bold text-primary">RACHEL</div>
             <div className="flex gap-8">
-              <a href="#projects" className="text-sm text-foreground/80 hover:text-primary transition-colors">
+              <button onClick={() => scrollToSection('projects')} className="text-sm text-foreground/80 hover:text-primary transition-colors cursor-pointer">
                 项目经历
-              </a>
-              <a href="#about" className="text-sm text-foreground/80 hover:text-primary transition-colors">
+              </button>
+              <button onClick={() => scrollToSection('about')} className="text-sm text-foreground/80 hover:text-primary transition-colors cursor-pointer">
                 关于我
-              </a>
-              <a href="#contact" className="text-sm text-foreground/80 hover:text-primary transition-colors">
+              </button>
+              <button onClick={() => scrollToSection('contact')} className="text-sm text-foreground/80 hover:text-primary transition-colors cursor-pointer">
                 联系方式
-              </a>
+              </button>
             </div>
           </div>
         </div>
